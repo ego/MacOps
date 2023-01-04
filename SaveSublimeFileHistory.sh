@@ -3,7 +3,7 @@
 # https://unix.stackexchange.com/questions/548806/how-to-get-just-two-items-of-a-json-like-file
 # https://softhints.com/recover-unsaved-files-sublime-linux-mac/#google_vignette
 
-SUBLIME_TABS_PATH=~/Downloads/State/SublimeFileHistory
+SUBLIME_TABS_PATH=~/Workspaces/Sublime/FileHistory
 SUBLIME_FILE_NAME="$(date '+%Y-%m-%d-%H').txt"
 SUBLIME_LOCAL_FIND=`find ~/'Library/Application Support/Sublime Text/Local' -maxdepth 1 -type f -name "*.sublime_session"`
 
@@ -27,5 +27,7 @@ done
 IFS="$OIFS"
 
 awk '!seen[$0]++' "$SUBLIME_TABS_PATH/_$SUBLIME_FILE_NAME" > "$SUBLIME_TABS_PATH/$SUBLIME_FILE_NAME"
+rm "$SUBLIME_TABS_PATH/_$SUBLIME_FILE_NAME"
+echo "Saved Sublime file history to $SUBLIME_TABS_PATH/$SUBLIME_FILE_NAME"
 
 echo 'Done'
