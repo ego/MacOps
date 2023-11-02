@@ -16,6 +16,17 @@ Sometimes application state can be broken, so we need a way to restore it, espec
 git clone https://github.com/ego/MacOps.git
 ```
 
+## Usage
+
+`cd MacOps/`
+
+`./Backup.sh`
+
+Note: Sublime tabs should be run manually
+
+`Sublime-save-tabs.py`
+
+
 ## Features:
 
 * Homebrew save Brewfile and brew --list commands
@@ -34,6 +45,10 @@ git clone https://github.com/ego/MacOps.git
 
 `./Finder-save-tabs.sh`
 
+* Sublime save files history
+
+`./Sublime-save-files-history.sh`
+
 * Sublime save open current Tabs
 
 Open Sublime and go to View/Show Console
@@ -45,10 +60,6 @@ and paste content from
 `Sublime-save-tabs.py`
 
 <img src="img/Sublime-console-code.png" width="400" />
-
-* Sublime save files history
-
-`./Sublime-save-files-history.sh`
 
 
 ### Debug
