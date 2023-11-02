@@ -2,7 +2,7 @@
 
 Backup data from major macOS Applications.
 
-![MacOps](img/rick-prediction.png)
+<img src="img/MacOps.png" width="400" />
 
 ## Motivation
 
@@ -19,27 +19,35 @@ git clone https://github.com/ego/MacOps.git
 ## Features:
 
 * Homebrew save Brewfile and brew --list commands
+
 `./Homebrew-save-brewfile.sh`
 
 * iTerm2 save open current Tabs
+
 `./iTerm2-save-tabs.sh`
 
 * Safari save open current Tabs
+
 `./Safari-save-tabs.sh`
 
 * Finder save open current Tabs
+
 `./Finder-save-tabs.sh`
 
 * Sublime save open current Tabs
 
-Open Sublime and go to View/Show Console and paste content from
+Open Sublime and go to View/Show Console
+
+<img src="img/Sublime-show-console.png" width="400" />
+
+and paste content from
+
 `Sublime-save-tabs.py`
 
-![Sublime Show console](img/Sublime-show-console.png)
-
-![Sublime Show console](img/Sublime-console-code.png)
+<img src="img/Sublime-console-code.png" width="400" />
 
 * Sublime save files history
+
 `./Sublime-save-files-history.sh`
 
 
@@ -48,9 +56,9 @@ Open Sublime and go to View/Show Console and paste content from
 AppleScript and JavaScript for Automation (JXA).
 Python and Bash for scripting.
 
-![Debug JXA](img/Debug-JXA.png)
+<img src="img/Debug-JXA.png" width="400" />
 
-Use OsasSript Editor
+Use [Script Editor on Mac](https://support.apple.com/en-gb/guide/script-editor/scpedt6935/mac)
 
 `open osascript/Debug.scpt`
 
