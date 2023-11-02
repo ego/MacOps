@@ -1,17 +1,14 @@
 # MacOps
 
-MacOS automates tools and scripts for day-to-day routine.
+Backup data from major macOS Applications.
 
-AppleScript and [JavaScript for Automation][JXA] (JXA).
+![MacOps](img/rick-prediction.png)
 
-![MacOps](rick-prediction.png)
+## Motivation
 
-## Features:
+Sometimes application state can be broken, so we need a way to restore it, especially when macOS cannot do it (after update).
 
-* Save **Finder** tabs
-* Save **iTerm2** tabs
-* Save **Sublime** tabs
-* Save **Sublime** file history from session
+## Run these scripts before close App, reboot, upgrade macOS.
 
 ## Install
 
@@ -19,72 +16,75 @@ AppleScript and [JavaScript for Automation][JXA] (JXA).
 git clone https://github.com/ego/MacOps.git
 ```
 
-## Usage
+## Features:
 
-### SaveSublimeCurrentTabs.py
+* Homebrew save Brewfile and brew --list commands
+`./Homebrew-save-brewfile.sh`
 
-Save Sublime open current tabs.
+* iTerm2 save open current Tabs
+`./iTerm2-save-tabs.sh`
 
-Sublime console: run content from SaveSublimeCurrentTabs.py
+* Safari save open current Tabs
+`./Safari-save-tabs.sh`
 
-![Sublime console](sublime-console.png)
+* Finder save open current Tabs
+`./Finder-save-tabs.sh`
 
-### SaveSublimeTabs.sh
+* Sublime save open current Tabs
 
-Save Sublime tabs
+Open Sublime and go to View/Show Console and paste content from
+`Sublime-save-tabs.py`
 
-```shell
-./SaveSublimeTabs.sh
+![Sublime Show console](img/Sublime-show-console.png)
+
+![Sublime Show console](img/Sublime-console-code.png)
+
+* Sublime save files history
+`./Sublime-save-files-history.sh`
+
+
+### Debug
+
+AppleScript and JavaScript for Automation (JXA).
+Python and Bash for scripting.
+
+![Debug JXA](img/Debug-JXA.png)
+
+Use OsasSript Editor
+
+`open osascript/Debug.scpt`
+
+Print logs or alert pop-ups:
+
+`console.log("") and  app.displayDialog("")`
+
+```JavaScript
+var app = Application.currentApplication()
+app.includeStandardAdditions = true
+
+var array = ["Sal", "Ben", "David", "Chris"]
+var arrayLength = array.length
+
+for (var i = 0; i < arrayLength; i++) {
+    var currentArrayItem = array[i]
+    // Process the current array item
+    app.displayDialog(`${currentArrayItem} is item ${i + 1} in the array.`)
+}
 ```
 
-### SaveSublimeFileHistory.sh
+[Mac Automation Scripting Guide](https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html)
 
-Save Sublime file history.
+[JXA](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation)
 
-```shell
-./SaveSublimeFileHistory.sh
-```
+[Closing lots of Safari tabs with JXA](https://alexwlchan.net/2022/safari-tabs/)
 
-![SaveSublimeFileHistory.sh](SaveSublimeFileHistory.png)
+[JavaScript for Automation](https://wiki.keyboardmaestro.com/JavaScript_for_Automation)
 
-### SaveiTerm2Tabs.scpt
+[Apple JavaScript for Automation](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html#//apple_ref/doc/uid/TP40014508)
 
-Save iTerm2 open tabs.
+[Introduction to AppleScript Language Guide](https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)
 
-```shell
-open SaveiTerm2Tabs.scpt
-```
-
-and press **Run** button.
-
-![SaveiTerm2Tabs.scpt](SaveiTerm2Tabs.png)
-
-
-### SaveFinderTabs.scpt
-
-Save macOS Finder open tabs.
-
-```shell
-open SaveFinderTabs.scpt
-```
-
-and press **Run** button.
-
-![SaveFinderTabs.scpt](SaveFinderTabs.png)
-
-
-## Motivation
-
-Sometimes application state can be broken, so we need a way to restore it, especially when macOS cannot do it.
-
-## How to set GitHub repository language
-
-* [Changing the Repo Language Shown](https://dev.to/katkelly/changing-your-repo-s-language-in-github-5gjo)
-* [Linguist overrides](https://github.com/github/linguist/blob/master/docs/overrides.md)
-
-## TODO
-
-* CRON job for scripts
-
-[JXA]: https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation
-    "JavaScript for Automation Release Notes - Apple Developer Documentation Archive"
+[PyXA](https://skaplanofficial.github.io/PyXA/tutorial/appscript.html)
+[appscript](https://appscript.sourceforge.io)
+[py-appscript](https://appscript.sourceforge.io/py-appscript/doc.html)
+[pyobjc](https://pypi.org/project/pyobjc/)
