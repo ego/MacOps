@@ -26,6 +26,13 @@ Note: Sublime tabs should be run manually
 
 `Sublime-save-tabs.py`
 
+Backup location user `HOME` directory with nested structure by apps
+
+```shell
+~/Workspaces/Homebrew/$(date '+%Y-%m-%d-%H')
+~/Workspaces/iTerm2/Tabs/$(date '+%Y-%m-%d-%H').txt
+# and so on ..
+```
 
 ## Features:
 
