@@ -18,6 +18,8 @@ git clone https://github.com/ego/MacOps.git
 
 ## Usage
 
+Partial backups
+
 `cd MacOps/`
 
 `./Backup.sh`
@@ -34,7 +36,14 @@ Backup location user `HOME` directory with nested structure by apps
 # and so on ..
 ```
 
-## Features:
+Full copy of Applications folders
+
+```shell
+./Backup-applications.sh
+```
+
+
+## Partial features:
 
 * Homebrew save Brewfile and brew --list commands
 
@@ -114,3 +123,9 @@ for (var i = 0; i < arrayLength; i++) {
 [appscript](https://appscript.sourceforge.io)
 [py-appscript](https://appscript.sourceforge.io/py-appscript/doc.html)
 [pyobjc](https://pypi.org/project/pyobjc/)
+
+[ls operation not permitted](https://discussions.apple.com/thread/8637915?answerId=34190311022#34190311022)
+
+[Profiles - Where Firefox stores your bookmarks, passwords and other user data](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data)
+
+[Notes.app - how to access history](https://apple.stackexchange.com/questions/141951/notes-app-how-to-access-history)
