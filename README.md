@@ -78,6 +78,10 @@ and paste content from
 <img src="img/Sublime-console-code.png" width="400" />
 
 
+### Restore Safari Tabs
+
+See [README](restore_safari_tabs/README.md)
+
 ### Debug
 
 AppleScript and JavaScript for Automation (JXA).
