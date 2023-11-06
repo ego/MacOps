@@ -158,3 +158,6 @@ cython_debug/
 
 restore_safari_tabs/.venv/
 restore_safari_tabs/Safari/
+
+safari_bookmarks_history_analytics/.venv/
+safari_bookmarks_history_analytics/Safari/

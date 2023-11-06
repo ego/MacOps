@@ -82,6 +82,18 @@ and paste content from
 
 See [README](restore_safari_tabs/README.md)
 
+### Safari Bookmarks Diff History
+
+Safari Bookmarks and History Analytics.
+
+* Compare `Bookmarks.plist` with `History.db`:
+
+`add_bookmarks_to_history.py` plus `Query.sql`
+
+* Save last_session_plist_to_csv
+
+See [README](safari_bookmarks_history_analytics/README.md)
+
 ### Debug
 
 AppleScript and JavaScript for Automation (JXA).
